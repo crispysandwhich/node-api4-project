@@ -8,7 +8,7 @@ const server = express()
 // middle ware
 server.use(express.json())
 // finds static assets -> tells express where our static assets are serverd from
-server.use(express.static(path.join(__dirname, 'client/build', 'index.html')))
+server.use(express.static(path.join(__dirname, 'client/build')))
 
 console.log(process.env.NODE_ENV)
 if(process.env.NODE_ENV === 'development'){
